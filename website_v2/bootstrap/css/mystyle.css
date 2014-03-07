@@ -1,0 +1,160 @@
+/*
+This is the custom css to over write the default bootstrap css
+
+*/
+@font-face {
+	font-family: 'Berlin Sans FB Demi';
+	src: url('BRLNSDB.TTF'); 
+}
+@font-face {
+	font-family: 'Avenir';
+	src: url('../fonts/Avenir LT Std/AvenirLTStd-Roman.otf'); 
+}
+@font-face {
+	font-family: 'MuseoSlab';
+	src: url('../fonts/museo typeface/Museo_Slab_500.otf'); 
+}
+@font-face {
+	font-family: 'BrandonBold';
+	src: url('../fonts/brandon_grotesque/brandongrotesquebold.ttf'); 
+}
+@font-face {
+	font-family: 'BrandonLight';
+	src: url('../fonts/brandon_grotesque/brandongrotesquelight.ttf'); 
+}
+@font-face {
+	font-family: 'BrandonReg';
+	src: url('../fonts/brandon_grotesque/brandongrotesqueregular.ttf'); 
+}
+
+html, body{background-image:url('../../images/light_noise_diagonal.png');}
+a{color:;font-size:2em;}
+.navbar-inner, .navbar-fixed-top{padding:1em;}
+.navbar{width:100%;}
+.navbar .nav > .li-pad > a {text-shadow:none;color:white;padding:1em;}
+.navbar .nav > li > a{font-size:1em;padding:0em;}
+/*
+.navbar-fixed-top{
+        -moz-box-shadow: 5px 0px 5px #151515;
+        -webkit-box-shadow: 5px 0px 5px #151515;
+        box-shadow: 5px 0px 5px #151515;
+}
+*/
+#nav-logo{width:6em;}
+
+#icon-header{width:10em;}
+.pad-it-1{padding:2em;}
+.color-it-gray{background-color:;padding:2em;}
+.hero-unit{background-color:;margin-top:em;}
+.subhead{padding:4em;}
+
+
+.full-large{
+    background : url(../../images/outside_dining.png) no-repeat center center ;
+    padding:15em 0 17em 0 ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color:#fff;
+    background-position:0 ;
+    width:100%;
+    margin-top:-5em;
+    -webkit-filter: drop-shadow(0 3px 2px hsla(0,0%,0%,.25));
+}
+
+
+.full-small{padding:16em;
+background : url(../../images/atx2.jpg) no-repeat center center;
+-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	background-position: 0em 0em;
+	color:#fff;
+   width:100%;
+}
+p{line-height:1.9em;}
+#desc_feat{font-size:1.2em;margin-bottom:2em;}
+.section-stuff{margin-bottom:;background-color:;}
+.img-smaller{}
+
+h1{font-size:3em;line-height: .7em;}
+h1, h2, h3, h4{font-family:BrandonBold;text-transform: uppercase;}
+h6{font-size:1em;font-family: BrandonReg;}
+h5{font-size:1.2em;font-family: BrandonBold;}
+h4{font-size:2.5em;}
+p{font-family: BrandonReg;font-size:1.2em;}
+
+.cursive{font-family:satisfy;text-transform: lowercase}
+ .navbar .brand {
+ position: fixed;    
+ overflow: visible;
+ padding-left: 0;    
+ padding-top: 0;
+ }
+.nav{margin-left:;margin-top:.2em;font-family:BrandonLight}
+.nav .navbar-nav a:hover{background-color:red;}
+.navbar-nav > li > a:hover{background-color:transparent;padding:;}
+.navbar-nav > .li-pad > a{
+    padding-bottom:-1em;
+  -webkit-transition: border-color .6s ease-in-out;
+  -moz-transition: border-color .6s ease-in-out;
+  -o-transition: border-color .6s ease-in-out;
+  transition: border-color .6s ease-in-out;
+  border-bottom:1px solid transparent;
+}
+
+.navbar-nav > .li-pad > a:hover{
+      background-color:transparent;    
+      border-color:#05c3bd; 
+}
+
+.shadow{
+    -moz-box-shadow: 5px 0px 5px white;
+        -webkit-box-shadow: 5px 0px 5px white;
+        box-shadow: 5px 0px 5px #fff;
+        box-shadow: 10px 10px 5px #888888;
+        z-index: 1;
+}
+.badb{z-index: 2;}
+.nav-color{
+        background-color: rgba(39,39,39,.9);
+        -moz-box-shadow: 5px 0px 5px #151515;
+        -webkit-box-shadow: 5px 0px 5px #151515;
+        box-shadow: 5px 0px 5px #151515;
+}
+#app-store-icon{width:10em;padding:0;margin-right:1em;}
+#testg{background-color:;}
+.sectional{background-color:#30c0bb/*#2cbdb9*/;}
+.back-dark{background-color:white;}
+.btn, .btn-large, .btn-success, .btn:hover{background-color:white;color:#151515; border-color:#ccc;}
+.btn:hover{border-color:#999;}
+.move-down{margin-top:5em;}
+
+#phone-pic{width:20em;}
+.col-md-6{background-color:;}
+.sketch-back{background:url(../../images/low_contrast_linen.png);padding:4em 0 4em;}
+.grey-sketch-back{background:url(../../images/light_noise_diagonal.png);}
+.straight-white{background-color:;}
+
+.dark-back{background-color:#151515;}
+.item p{color:white;width:;}
+.item h3{color:white;font-size:3em;}
+.container-sub{margin:0 auto;}
+
+.centered-one{width:80%;margin:0 auto;background-color:;margin-bottom:;}
+.prof-pic{width:9em;}
+.pad-top{padding-top:15em;}
+.pad-bottom{padding-bottom:1.2em;}
+
+.upfront{z-index: 1000;background-color: #151515;width:100%;}
+.navbar-toggle{z-index: 1001;background-color:;}
+.zfront{z-index: 1000;}
+
+
+.icon-bar{background-color:white;}
+
+@media (max-width: 767px) {
+ #phone-pic{width:14em;margin-left:;}   
+}

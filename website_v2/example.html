@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>My first bootstrap project</title>
+        
+        <link rel ="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" title="style1">
+        <link rel ="stylesheet" type="text/css" href="bootstrap/css/mystyle.css" title="style1">
+        <link rel ="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.css" title="style1">
+        
+        <link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+        
+        <!-- Load jQuery -->
+        <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>-->
+ 
+        <!-- Load ScrollTo -->
+        <script type="text/javascript" src="http://flesler-plugins.googlecode.com/files/jquery.scrollTo-1.4.2-min.js"></script>
+ 
+        <!-- Load LocalScroll -->
+        <script type="text/javascript" src="http://flesler-plugins.googlecode.com/files/jquery.localscroll-1.2.7-min.js"></script>
+    </head>
+    <body>
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>    
+        <script src="bootstrap/js/bootstrap.js"></script>
+        <script type="text/javascript">
+            
+        </script>
+        <script>
+            $(document).ready(function() {
+                //alert("hibe");
+               if($(window).width() < 700)
+                    $('.navbar').addClass('upfront');
+                if($(window).width() < 400){
+                    $('.nav').addClass('helpme');
+                    $('#nav-logo').addClass('hidden');
+                }
+            
+  //change the integers below to match the height of your upper dive, which I called
+  //banner.  Just add a 1 to the last number.  console.log($(window).scrollTop())
+  //to figure out what the scroll position is when exactly you want to fix the nav
+  //bar or div or whatever.  I stuck in the console.log for you.  Just remove when
+  //you know the position.
+            $(window).scroll(function () {   
+                //alert("hi");
+                console.log($(window).scrollTop());
+                    
+                if ($(window).scrollTop() > 200) {
+                    $('.navbar-fixed-top').addClass('nav-color');
+                }   
+
+                if ($(window).scrollTop() < 201) {
+                    $('.navbar-fixed-top').removeClass('nav-color');
+                }
+                
+                });
+                
+            });
+            
+            $(window).resize(function() {
+                winWidth = $(window).width();
+                if(winWidth < 700)
+                    $('.navbar').addClass('upfront');
+                else
+                    $('.navbar').removeClass('upfront');
+            });
+            $(window).resize(function() {
+                winWidth = $(window).width();
+                if(winWidth < 900)
+                    $('.navbar').addClass('nav-color zfront');
+                else
+                    $('.navbar').removeClass('nav-color zfront');
+            });
+            $(window).resize(function() {
+                winWidth = $(window).width();
+                if(winWidth < 400){
+                    $('.nav').addClass('helpme navbar-fixed-top');
+                    $('#nav-logo').addClass('hidden');
+                }
+                else{
+                    $('#nav-logo').removeClass('hidden');
+                    $('.nav').removeClass('helpme')
+                }
+                
+            });
+            
+        </script>
+        
+        <div class="navbar" role="navigation">
+              <div class="na navbar-fixed-top">
+                <div class="container">
+                    <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+                                        <span class = "icon-bar"></span>
+                                        <span class = "icon-bar"></span>
+                                        <span class = "icon-bar"></span>
+                    </button>
+        
+                    <a href="http://localhost/GitHub/Recommenu_m/website_v2/example.html" class="brand"><img src="images/wordmark_white.png" alt="logo" id="nav-logo"/> </a>
+                    <div class="collapse navbar-collapse navHeaderCollapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#" class=""><img src="images/apple-badge.png" alt="logo" id="app-store-icon"/></a></li>
+                            <li class="active li-pad"><a class="a-pad" href="#">About the App</a></li>
+                            <li class="li-pad"><a href="#">Learn More</a></li>
+                            <li class="li-pad"><a href="#">Meet the Team</a></li>
+                            <li class="li-pad"><a href="#">Contact Us</a></li>
+                            <li class="li-pad"><a href="http://localhost/GitHub/Recommenu_m/website_v2/blog/">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
+        </div>
+
+        <!--
+        <div class = "navbar navbar-inverse navbar-static-top">
+                        <div class = "container">
+                               
+                                <a href = "#" class = "navbar-brand">Tech Site</a>
+                               
+                                <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+                                        <span class = "icon-bar"></span>
+                                        <span class = "icon-bar"></span>
+                                        <span class = "icon-bar"></span>
+                                </button>
+                               
+                                <div class = "collapse navbar-collapse navHeaderCollapse">
+                               
+                                        <ul class = "nav navbar-nav navbar-right">
+                                       
+                                                <li class = "active"><a href = "#">Home</a></li>
+                                                <li><a href = "#">Blog</a></li>
+                                                <li class = "dropdown">
+                                                       
+                                                        <a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">Social Media <b class = "caret"></b></a>
+                                                        <ul class = "dropdown-menu">
+                                                                <li><a href = "#">Twitter</a></li>
+                                                                <li><a href = "#">Facebook</a></li>
+                                                                <li><a href = "#">Google+</a></li>
+                                                                <li><a href = "#">Instagram</a></li>
+                                                        </ul>
+                                               
+                                                </li>
+                                                <li><a href = "#">About</a></li>
+                                                <li><a href = "#">Contact</a></li>
+                                       
+                                        </ul>
+                               
+                                </div>
+                               
+                        </div>
+                </div>
+-->
+            <div id="testing" class="full-large">
+                <!--<img src="images/img_cover_new.jpg" class="img-responsive" alt="Responsive image">-->
+                <div class="container">
+                    <div class="text-center">
+                    <img src="images/monogram_blue_drop shadow.png" id="icon-header" />    
+                    <h2>Helping you choose</h2>
+                    <h1>a <span class="cursive">great meal</span>, every time</h1>
+                    <!--<h3>Recommendations from the people that you trust</h3>-->
+                    </div>
+                </div>
+            </div>
+       <section class="sectional"> 
+        <div class="container">
+            
+            <div id="testg" class="hero-unit">
+                <div class="text-center subhead">
+                    <img src="images/foodie-icon.png" id="foodie-icon">            
+                    <h3>Are you a Foodie</h3>
+                    <p>Find out what it means to join onto the recommenu team as a tastemaker</p>
+                    <a href="#" class="btn btn-large btn-success">Get Started</a>
+                </div>
+                
+                <!--
+                <div class="col-md-6 subhead">
+                    <div class="pad-it-1">
+                    <h3>Are you a Foodie?</h3>
+                    <p>Find out what it means to join onto the recommenu team as a tastemaker</p>
+                    <a href="#" class="btn btn-large btn-success">Get Started</a>
+                    </div>
+                </div>
+                <div class="col-md-6 subhead">
+                    <div class="pad-it-1">
+                    <h3>Are you a restaurant?</h3>
+                    <p>Find out what it means to join onto the recommenu team as a restaurant</p>
+                    <a href="#" class="btn btn-large btn-success">Get Started</a>
+                    </div>
+                </div>
+                -->
+            </div>
+            </div>
+           </section>
+        
+           <!-- 
+          <section class="sectional back-dark subhead">
+              <div class="container">
+                  <form class="form-horizontal text-center">
+                      <h2>Horizontal forms</h2>
+                      <div class="control-group">
+                          <label class="control-label" for="inputEmail"></label>
+                          <div class="controls">
+                              <input type="text" id="inputEmail" placeholder="game">
+                          </div>
+                      </div>
+                      <div class="control-group">
+                          <label class="control-label" for="inputPassword"></label>
+                          <div class="controls">
+                              <input type="password" id="inputPassword" placeholder="name">
+                          </div>
+                      </div>
+                      <div class="control-group">
+                          <div class="controls">
+                              <button type="submit" class="btn">Sign in</button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </section>        
+           --> 
+        <!--  Carousel - consult the Twitter Bootstrap docs at 
+      http://twitter.github.com/bootstrap/javascript.html#carousel -->
+        <section class="sketch-back">
+        <div id="this-carousel-id" class="carousel slide"><!-- class of slide for animation -->
+            <div class="carousel-inner container">
+                
+                <div class="item active container"><!-- class of active since it's the first item -->
+                    <div class="col-md-6 pad-it-1 text-center">
+                        <img src="images/screens/locate.png" id="phone-pic" class="" alt="" />
+                    </div>
+                    <div class="col-md-6 pad-it-1">
+                        <h3>Find the closest Restaurant</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a metus arcu. Mauris tempus lorem eget purus nec, mattis dictum leo. Aenean at ante fringilla, dictum dolor nec, laoreet diam. In consectetur molestie erat et dictum. Nulla id elit non quam tristique sodales. Aliquam gravida neque egestas vestibulum rhoncus. Aliquam consectetur dignissim mollis. Nunc adipiscing et felis vel mo
+                            Suspendisse vitae neque tincidunt, bibendum quam sit amet
+                        </p>
+                    </div>
+                    <!--
+                    <div class="carousel-caption">
+                        <p>Caption text here</p>
+                    </div>
+                    -->
+                </div>
+                <div class="item">
+                    <div class="col-md-6 pad-it-1 text-center">
+                    <img src="images/screens/menu_ratings.png"id="phone-pic" class="full-pic" alt="" />
+                    </div>
+                    <div class="col-md-6 pad-it-1">
+                        <h3>Individual Item Ratings</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a metus arcu. Mauris tempus lorem eget purus nec, mattis dictum leo. Aenean at ante fringilla, dictum dolor nec, laoreet diam. In consectetur molestie erat et dictum. Nulla id elit non quam tristique sodales. Aliquam gravida neque egestas vestibulum rhoncus. Aliquam consectetur dignissim mollis. Nunc adipiscing et felis vel mo
+                            Suspendisse vitae neque tincidunt, bibendum quam sit amet
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="col-md-6 pad-it-1 text-center">
+                    <img src="images/screens/friends.png" id="phone-pic" class="full-pic" alt="" />
+                    </div>
+                    <div class="col-md-6 pad-it-1">
+                        <h3>Social Media</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a metus arcu. Mauris tempus lorem eget purus nec, mattis dictum leo. Aenean at ante fringilla, dictum dolor nec, laoreet diam. In consectetur molestie erat et dictum. Nulla id elit non quam tristique sodales. Aliquam gravida neque egestas vestibulum rhoncus. Aliquam consectetur dignissim mollis. Nunc adipiscing et felis vel mo
+                            Suspendisse vitae neque tincidunt, bibendum quam sit amet
+                        </p>
+                    </div>
+                </div>
+                <div class="item center-block">
+                    <div class="col-md-6 pad-it-1 text-center">
+                    <img src="images/screens/rate.png" id="phone-pic" class="full-pic" alt="" />
+                    </div>
+                    <div class="col-md-6 pad-it-1">
+                        <h3>Help your friends</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a metus arcu. Mauris tempus lorem eget purus nec, mattis dictum leo. Aenean at ante fringilla, dictum dolor nec, laoreet diam. In consectetur molestie erat et dictum. Nulla id elit non quam tristique sodales. Aliquam gravida neque egestas vestibulum rhoncus. Aliquam consectetur dignissim mollis. Nunc adipiscing et felis vel mo
+                            Suspendisse vitae neque tincidunt, bibendum quam sit amet
+                        </p>
+                    </div>
+                </div>
+            </div><!-- /.carousel-inner -->
+            <!--  Next and Previous controls below
+            href values must reference the id for this carousel -->
+            <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
+        </div><!-- /.carousel -->
+        </section>
+        
+        <section class="gray-sketch-back subhead">
+            <div class="container">
+                <h2 class="text-center pad-bottom">Meet the Team</h2>
+               <div class="centered-one"> 
+                <div class="col-md-4 text-center">
+                    <img src="images/img_jake.png" class="prof-pic">
+                    <h5>Jake Bailey</h5>
+                    <h6>CEO</h6>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="images/img_blake.png" class="prof-pic">
+                    <h5>Blake Ellingham</h5>
+                    <h6>CTO, Frontend Developer</h6>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="images/img_carlos.png" class="prof-pic">
+                    <h5>Carlos Balderas</h5>
+                    <h6>Developer</h6>
+                </div>
+               </div>
+                <div class="centered-one pad-top"> 
+                <div class="col-md-4 text-center">
+                    <img src="images/img_katie.png" class="prof-pic">
+                    <h5>Katie Eldredge</h5>
+                    <h6>Designer</h6>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="images/img_chris.png" class="prof-pic">
+                    <h5>Chris Hume</h5>
+                    <h6>Developer</h6>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="images/img_claire.png" class="prof-pic">
+                    <h5>Claire Zimowski</h5>
+                    <h6>Designer</h6>
+                </div>
+               </div>
+            </div>
+        </section>
+        
+        <section class="sectional straight-white">
+            <div class="container">
+                <div id="mailing_list_content" class="">   
+                     <h3>Interested in Recommenu?</h3>
+                     <p id="desc_title2">Sign up for updates, special invites and early access.</p>
+                
+  
+    <form id="signup" action="cover_page.php" method="get">
+        <input type="hidden" name="ajax" value="true" />
+        <table id="sign_up_form">
+            <tr>
+                <td>
+                    <input type="text" name="fname" placeholder="First Name" id="fname" class="textinput" value="" />
+                </td>
+                <td>
+                    <input type="text" name="lname" placeholder="Last Name" id="lname" class="textinput" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="email" name="email" placeholder="Email" id="email" class="textinput" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="text" name="cname" id="cname" placeholder="City" class="textinput" value="" />
+                </td>
+            </tr>
+            <!--
+            HTML: <input type="radio" name="emailtype" value="html" checked="checked">
+            Text: <input type="radio" name="emailtype" value="text">
+            -->
+            <tr>
+                <td colspan="2">
+                    <input type="submit" id="SendButton" name="submit" class="textinput" value="Submit" />
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div id="message"></div>
+
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        //alert("I am an alert box!");
+        $('#signup').submit(function() {
+            $("#message").html("<span class='error'>Adding your email address...</span>");
+            $.ajax({
+                url: 'mcapi/inc/store-address.php', // proper url to your "store-address.php" file
+                data: $('#signup').serialize(),
+                success: function(msg) {
+                    $('#message').html(msg);
+                }
+            });
+        return false;
+        });
+    });
+    </script>
+            </div>
+        </section>
+        
+        
+        <section class="dark-back subhead">
+            <footer>
+                contact info
+            </footer>
+        </section>
+        <!--
+        <div class="container">
+            <div class="container-fluid">
+            <div class="fluid-row">
+               <div class=""> 
+                <div class="col-md-4 pad-it-1">
+                    <div class="color-it-gray">
+                    <img src="images/img_menu.png" class="img-responsive img-smaller" />
+                </div></div>
+                <div class="col-md-8 pad-it-1">
+                    <div class="color-it-gray">
+                        <h4>Decide What to Order</h4>
+                            <p id="desc_feat">
+                                You know where to eat. Now decide what to eat. Have an answer to the question we all ask: "What's good here...?"
+                            </p>
+                                   
+                                   <h4>Opinions you Actually Trust</h4>
+                            <p id="desc_feat">
+                                See the trusted opinions of local chefs, foodies, and your friends.
+                            </p>
+                                   
+                                   <h4>Convenient Quick-Glance Ratings</h4>
+                            <p id="desc_feat">
+                                No long reviews. No boring 1-5 star ratings. Fun, simple, intuitive color ratings.
+                            </p>
+                    </div>                        
+                </div>
+                
+                </div>
+                
+            </div>
+                </div></div>
+            <!--
+            <h1><a href="#">Bootstrap Site</a></h1>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a metus arcu. Mauris tempus lorem turpis. Ut ultrices dolor urna, vel tincidunt augue gravida sed. Nullam luctus euismod urna non tincidunt. Sed urna ante, tempor eget purus nec, mattis dictum leo. Aenean at ante fringilla, dictum dolor nec, laoreet diam. In consectetur molestie erat et dictum. Nulla id elit non quam tristique sodales. Aliquam gravida neque egestas vestibulum rhoncus. Aliquam consectetur dignissim mollis. Nunc adipiscing et felis vel molestie.
+
+Suspendisse vitae neque tincidunt, bibendum quam sit amet, tincidunt lectus. Donec urna magna, rutrum vitae placerat ac, vulputate in nibh. Donec volutpat leo elementum, vulputate elit ut, adipiscing libero. Pellentesque eu sagittis ante. Nunc commodo sed magna lobortis pulvinar. Suspendisse lobortis bibendum orci. Nunc arcu enim, aliquet at laoreet facilisis, mattis eu est.
+
+Suspendisse ac elit ut tortor vehicula consequat et ac ante. </p><p>Aenean convallis tincidunt leo. Phasellus vel leo velit. Vestibulum commodo sit amet purus et lobortis. Nulla congue mauris at aliquam rutrum. Proin aliquet, dolor id rutrum tincidunt, mi urna scelerisque dolor, ut auctor nulla est sit amet velit. Integer rhoncus nunc eget est euismod, at lobortis leo mollis. Curabitur tincidunt magna risus, at pellentesque nunc viverra at. In eget fermentum diam. Sed rutrum vitae turpis ac bibendum. Mauris nisl magna, viverra vel tempor id, volutpat id tellus. Sed tempus lacus felis, eu lobortis mauris dapibus vel. Fusce suscipit tincidunt ante sit amet laoreet. Sed consectetur tortor eget est aliquet, ut blandit nulla rhoncus. Phasellus aliquet quam venenatis, lacinia nisi ut, iaculis elit.
+
+Nunc ut augue ante. Duis in dignissim mi. Donec ultrices leo ut est accumsan vestibulum. Vestibulum sapien augue, convallis ut sollicitudin non, malesuada id magna. Proin in egestas nulla. Etiam sollicitudin, neque ac aliquet malesuada, ante massa posuere risus, ut ultricies turpis turpis ut justo. Aenean cursus lacinia magna et viverra. Nullam facilisis tortor lobortis lorem feugiat, sit amet vulputate mi aliquet. Aliquam lobortis sagittis blandit. Nunc id nunc et velit pretium aliquam et sed libero. Aenean molestie massa lacus, eget volutpat metus pharetra nec. Etiam quis eros enim. Aliquam auctor dolor vitae tortor feugiat rutrum. Ut sed elementum nibh.
+
+Ut cursus ligula eu augue ultrices vehicula. Nam posuere in elit vel mattis. Cras eu erat consectetur, volutpat risus a, pulvinar velit. Vestibulum vel blandit nisl. Curabitur egestas lorem sed bibendum lacinia. Sed a lacus sed quam commodo hendrerit. Phasellus lacinia nibh elit, tempor tempus metus viverra nec. Sed a lectus et dui imperdiet gravida. Nunc ullamcorper metus nisi, in iaculis dolor ullamcorper eu. Pellentesque vestibulum, lectus id hendrerit volutpat, felis diam lacinia mi, quis mollis diam metus nec quam. Aenean ac sapien iaculis, blandit nunc vitae, egestas neque. Curabitur nec adipiscing turpis. Donec quis massa ac orci ultrices tristique congue sed null
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a metus arcu. Mauris tempus lorem turpis. Ut ultrices dolor urna, vel tincidunt augue gravida sed. Nullam luctus euismod urna non tincidunt. Sed urna ante, tempor eget purus nec, mattis dictum leo. Aenean at ante fringilla, dictum dolor nec, laoreet diam. In consectetur molestie erat et dictum. Nulla id elit non quam tristique sodales. Aliquam gravida neque egestas vestibulum rhoncus. Aliquam consectetur dignissim mollis. Nunc adipiscing et felis vel molestie.
+
+Suspendisse vitae neque tincidunt, bibendum quam sit amet, tincidunt lectus. Donec urna magna, rutrum vitae placerat ac, vulputate in nibh. Donec volutpat leo elementum, vulputate elit ut, adipiscing libero. Pellentesque eu sagittis ante. Nunc commodo sed magna lobortis pulvinar. Suspendisse lobortis bibendum orci. Nunc arcu enim, aliquet at laoreet facilisis, mattis eu est.
+
+Suspendisse ac elit ut tortor vehicula consequat et ac ante. Aenean convallis tincidunt leo. Phasellus vel leo velit. Vestibulum commodo sit amet purus et lobortis. Nulla congue mauris at aliquam rutrum. Proin aliquet, dolor id rutrum tincidunt, mi urna scelerisque dolor, ut auctor nulla est sit amet velit. Integer rhoncus nunc eget est euismod, at lobortis leo mollis. Curabitur tincidunt magna risus, at pellentesque nunc viverra at. In eget fermentum diam. Sed rutrum vitae turpis ac bibendum. Mauris nisl magna, viverra vel tempor id, volutpat id tellus. Sed tempus lacus felis, eu lobortis mauris dapibus vel. Fusce suscipit tincidunt ante sit amet laoreet. Sed consectetur tortor eget est aliquet, ut blandit nulla rhoncus. Phasellus aliquet quam venenatis, lacinia nisi ut, iaculis elit.
+
+Nunc ut augue ante. Duis in dignissim mi. Donec ultrices leo ut est accumsan vestibulum. Vestibulum sapien augue, convallis ut sollicitudin non, malesuada id magna. Proin in egestas nulla. Etiam sollicitudin, neque ac aliquet malesuada, ante massa posuere risus, ut ultricies turpis turpis ut justo. Aenean cursus lacinia magna et viverra. Nullam facilisis tortor lobortis lorem feugiat, sit amet vulputate mi aliquet. Aliquam lobortis sagittis blandit. Nunc id nunc et velit pretium aliquam et sed libero. Aenean molestie massa lacus, eget volutpat metus pharetra nec. Etiam quis eros enim. Aliquam auctor dolor vitae tortor feugiat rutrum. Ut sed elementum nibh.
+
+Ut cursus ligula eu augue ultrices vehicula. Nam posuere in elit vel mattis. Cras eu erat consectetur, volutpat risus a, pulvinar velit. Vestibulum vel blandit nisl. Curabitur egestas lorem sed bibendum lacinia. Sed a lacus sed quam commodo hendrerit. Phasellus lacinia nibh elit, tempor tempus metus viverra nec. Sed a lectus et dui imperdiet gravida. Nunc ullamcorper metus nisi, in iaculis dolor ullamcorper eu. Pellentesque vestibulum, lectus id hendrerit volutpat, felis diam lacinia mi, quis mollis diam metus nec quam. Aenean ac sapien iaculis, blandit nunc vitae, egestas neque. Curabitur nec adipiscing turpis. Donec quis massa ac orci ultrices tristique congue sed null</p>
+        </div>
+              
+        <!-- end container -->
+        <!--
+        <div id="testing" class="full-small">
+                <!--<img src="images/img_cover_new.jpg" class="img-responsive" alt="Responsive image">-->
+        <!--
+                <div class="container">
+                    <h1>testing this</h1>
+                    <h4>sub header test</h4>
+                </div>
+                </div>
+        <div class="container">
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a metus arcu. Mauris tempus lorem turpis. Ut ultrices dolor urna, vel tincidunt augue gravida sed. Nullam luctus euismod urna non tincidunt. Sed urna ante, tempor eget purus nec, mattis dictum leo. Aenean at ante fringilla, dictum dolor nec, laoreet diam. In consectetur molestie erat et dictum. Nulla id elit non quam tristique sodales. Aliquam gravida neque egestas vestibulum rhoncus. Aliquam consectetur dignissim mollis. Nunc adipiscing et felis vel molestie.
+
+Suspendisse vitae neque tincidunt, bibendum quam sit amet, tincidunt lectus. Donec urna magna, rutrum vitae placerat ac, vulputate in nibh. Donec volutpat leo elementum, vulputate elit ut, adipiscing libero. Pellentesque eu sagittis ante. Nunc commodo sed magna lobortis pulvinar. Suspendisse lobortis bibendum orci. Nunc arcu enim, aliquet at laoreet facilisis, mattis eu est.
+
+Suspendisse ac elit ut tortor vehicula consequat et ac ante. Aenean convallis tincidunt leo. Phasellus vel leo velit. Vestibulum commodo sit amet purus et lobortis. Nulla congue mauris at aliquam rutrum. Proin aliquet, dolor id rutrum tincidunt, mi urna scelerisque dolor, ut auctor nulla est sit amet velit. Integer rhoncus nunc eget est euismod, at lobortis leo mollis. Curabitur tincidunt magna risus, at pellentesque nunc viverra at. In eget fermentum diam. Sed rutrum vitae turpis ac bibendum. Mauris nisl magna, viverra vel tempor id, volutpat id tellus. Sed tempus lacus felis, eu lobortis mauris dapibus vel. Fusce suscipit tincidunt ante sit amet laoreet. Sed consectetur tortor eget est aliquet, ut blandit nulla rhoncus. Phasellus aliquet quam venenatis, lacinia nisi ut, iaculis elit.
+
+Nunc ut augue ante. Duis in dignissim mi. Donec ultrices leo ut est accumsan vestibulum. Vestibulum sapien augue, convallis ut sollicitudin non, malesuada id magna. Proin in egestas nulla. Etiam sollicitudin, neque ac aliquet malesuada, ante massa posuere risus, ut ultricies turpis turpis ut justo. Aenean cursus lacinia magna et viverra. Nullam facilisis tortor lobortis lorem feugiat, sit amet vulputate mi aliquet. Aliquam lobortis sagittis blandit. Nunc id nunc et velit pretium aliquam et sed libero. Aenean molestie massa lacus, eget volutpat metus pharetra nec. Etiam quis eros enim. Aliquam auctor dolor vitae tortor feugiat rutrum. Ut sed elementum nibh.
+
+Ut cursus ligula eu augue ultrices vehicula. Nam posuere in elit vel mattis. Cras eu erat consectetur, volutpat risus a, pulvinar velit. Vestibulum vel blandit nisl. Curabitur egestas lorem sed bibendum lacinia. Sed a lacus sed quam commodo hendrerit. Phasellus lacinia nibh elit, tempor tempus metus viverra nec. Sed a lectus et dui imperdiet gravida. Nunc ullamcorper metus nisi, in iaculis dolor ullamcorper eu. Pellentesque vestibulum, lectus id hendrerit volutpat, felis diam lacinia mi, quis mollis diam metus nec quam. Aenean ac sapien iaculis, blandit nunc vitae, egestas neque. Curabitur nec adipiscing turpis. Donec quis massa ac orci ultrices tristique congue sed null</p>
+      
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a metus arcu. Mauris tempus lorem turpis. Ut ultrices dolor urna, vel tincidunt augue gravida sed. Nullam luctus euismod urna non tincidunt. Sed urna ante, tempor eget purus nec, mattis dictum leo. Aenean at ante fringilla, dictum dolor nec, laoreet diam. In consectetur molestie erat et dictum. Nulla id elit non quam tristique sodales. Aliquam gravida neque egestas vestibulum rhoncus. Aliquam consectetur dignissim mollis. Nunc adipiscing et felis vel molestie.
+
+Suspendisse vitae neque tincidunt, bibendum quam sit amet, tincidunt lectus. Donec urna magna, rutrum vitae placerat ac, vulputate in nibh. Donec volutpat leo elementum, vulputate elit ut, adipiscing libero. Pellentesque eu sagittis ante. Nunc commodo sed magna lobortis pulvinar. Suspendisse lobortis bibendum orci. Nunc arcu enim, aliquet at laoreet facilisis, mattis eu est.
+
+Suspendisse ac elit ut tortor vehicula consequat et ac ante. Aenean convallis tincidunt leo. Phasellus vel leo velit. Vestibulum commodo sit amet purus et lobortis. Nulla congue mauris at aliquam rutrum. Proin aliquet, dolor id rutrum tincidunt, mi urna scelerisque dolor, ut auctor nulla est sit amet velit. Integer rhoncus nunc eget est euismod, at lobortis leo mollis. Curabitur tincidunt magna risus, at pellentesque nunc viverra at. In eget fermentum diam. Sed rutrum vitae turpis ac bibendum. Mauris nisl magna, viverra vel tempor id, volutpat id tellus. Sed tempus lacus felis, eu lobortis mauris dapibus vel. Fusce suscipit tincidunt ante sit amet laoreet. Sed consectetur tortor eget est aliquet, ut blandit nulla rhoncus. Phasellus aliquet quam venenatis, lacinia nisi ut, iaculis elit.
+
+Nunc ut augue ante. Duis in dignissim mi. Donec ultrices leo ut est accumsan vestibulum. Vestibulum sapien augue, convallis ut sollicitudin non, malesuada id magna. Proin in egestas nulla. Etiam sollicitudin, neque ac aliquet malesuada, ante massa posuere risus, ut ultricies turpis turpis ut justo. Aenean cursus lacinia magna et viverra. Nullam facilisis tortor lobortis lorem feugiat, sit amet vulputate mi aliquet. Aliquam lobortis sagittis blandit. Nunc id nunc et velit pretium aliquam et sed libero. Aenean molestie massa lacus, eget volutpat metus pharetra nec. Etiam quis eros enim. Aliquam auctor dolor vitae tortor feugiat rutrum. Ut sed elementum nibh.
+
+Ut cursus ligula eu augue ultrices vehicula. Nam posuere in elit vel mattis. Cras eu erat consectetur, volutpat risus a, pulvinar velit. Vestibulum vel blandit nisl. Curabitur egestas lorem sed bibendum lacinia. Sed a lacus sed quam commodo hendrerit. Phasellus lacinia nibh elit, tempor tempus metus viverra nec. Sed a lectus et dui imperdiet gravida. Nunc ullamcorper metus nisi, in iaculis dolor ullamcorper eu. Pellentesque vestibulum, lectus id hendrerit volutpat, felis diam lacinia mi, quis mollis diam metus nec quam. Aenean ac sapien iaculis, blandit nunc vitae, egestas neque. Curabitur nec adipiscing turpis. Donec quis massa ac orci ultrices tristique congue sed null</p>
+      </div>
+        -->
+        
+        
+        
+        
+    </body>
+    
+</html>

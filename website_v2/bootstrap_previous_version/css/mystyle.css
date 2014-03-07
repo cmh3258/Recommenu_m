@@ -1,0 +1,9 @@
+/*
+This is the custom css to over write the default bootstrap css
+
+*/
+
+h1, a{color:green;font-size:2em;}
+.navbar-inner, .navbar-fixed-top{background-color:#151515;color:blue;background-image:none;padding:1em;}
+.navbar{width:100%;margin-bottom:9em;}
+.navbar .nav > li > a {text-shadow:none;color:white;}
