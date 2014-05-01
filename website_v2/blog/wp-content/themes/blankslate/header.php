@@ -49,7 +49,7 @@
                                         <span class = "icon-bar"></span>
                     </button>
         
-                    <a href="http://localhost/GitHub/Recommenu_m/website_v2/example.html" class="brand"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/wordmark_blue.png" alt="logho" id="nav-logo"/> </a>
+                    <a href="http://recommenuapp.com/" class="brand"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/wordmark_blue.png" alt="logho" id="nav-logo"/> </a>
                     <div class="collapse navbar-collapse navHeaderCollapse">
                         <ul class="nav navbar-nav navbar-right">
                            <!-- <li><a href="#" class=""><img src="<?php bloginfo('stylesheet_directory'); ?>/images/apple-badge.png" alt="logo" id="app-store-icon"/></a></li>

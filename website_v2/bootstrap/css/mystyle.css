@@ -28,18 +28,12 @@ This is the custom css to over write the default bootstrap css
 }
 
 html, body{background-image:url('../../images/light_noise_diagonal.png');}
-a{color:;font-size:2em;}
+a{font-size:2em;}
 .navbar-inner, .navbar-fixed-top{padding:1em;}
 .navbar{width:100%;}
 .navbar .nav > .li-pad > a {text-shadow:none;color:white;padding:1em;}
 .navbar .nav > li > a{font-size:1em;padding:0em;}
-/*
-.navbar-fixed-top{
-        -moz-box-shadow: 5px 0px 5px #151515;
-        -webkit-box-shadow: 5px 0px 5px #151515;
-        box-shadow: 5px 0px 5px #151515;
-}
-*/
+
 #nav-logo{width:6em;}
 
 #icon-header{width:10em;}
@@ -47,7 +41,6 @@ a{color:;font-size:2em;}
 .color-it-gray{background-color:;padding:2em;}
 .hero-unit{background-color:;margin-top:em;}
 .subhead{padding:4em;}
-
 
 .full-large{
     background : url(../../images/outside_dining.png) no-repeat center center ;
@@ -123,11 +116,17 @@ p{font-family: BrandonReg;font-size:1.2em;}
         -moz-box-shadow: 5px 0px 5px #151515;
         -webkit-box-shadow: 5px 0px 5px #151515;
         box-shadow: 5px 0px 5px #151515;
+        background-color:;height:;width:100%;-webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+          
 }
+.nav-height{height:5.4em;}
 #app-store-icon{width:10em;padding:0;margin-right:1em;}
 #testg{background-color:;}
 .sectional{background-color:#30c0bb/*#2cbdb9*/;}
 .back-dark{background-color:white;}
+.btn{padding:1em 2em 1em 2em;}
 .btn, .btn-large, .btn-success, .btn:hover{background-color:white;color:#151515; border-color:#ccc;}
 .btn:hover{border-color:#999;}
 .move-down{margin-top:5em;}
@@ -155,6 +154,60 @@ p{font-family: BrandonReg;font-size:1.2em;}
 
 .icon-bar{background-color:white;}
 
+#form_email{background-color:;}
+/*
+input{float:;padding:1em;background-color:;width:70%;margin: 0;font-family:Avenir;font-size:1em;text-align:right;}
+*/
+input{margin: 0 auto;width:100%;display:block;padding:1em;font-family:Lato;margin-top:1em;font-size:1em;}
+#message{color:white;}
+#table_interest{width:100%;}
+#submit_button_2, #SendButton{float:;margin-left:0em;width:10em;
+        border-top:		1px solid #a3ceda;
+        border-left:		1px solid #a3ceda;
+	border-right:		1px solid #4f6267;
+	border-bottom:		1px solid #4f6267;
+	background-color:	#151515;
+	font-weight:		;
+	color:			white;
+       
+}
+#submit_button_2, #SendButton:hover{
+    background-color:#f36644;
+      -webkit-transition: background-color .2s ease-in-out;
+  -moz-transition: background-color .2s ease-in-out;
+  -o-transition: background-color .2s ease-in-out;
+  transition: background-color .2s ease-in-out;
+}
+#sign_up_form{background-color:;margin:0 auto;}
+#sign_up_form tr{width:100%;}
+#sign_up_form td{background-color:;padding:0 3em 0em 0;}
+#sign_up_form2, #signup2{display:none;}
+
+footer{padding-bottom:2em;}
+#icon_navigation li{text-decoration: none; list-style: none;padding:1em;}
+#icon_navigation img{width:2em;padding;}
+.container_small{width:70%;margin:0 auto;}
+
+
+/*Foodie Site*/
+.big-blue{margin-top:4em;}
+.big-blue h2{font-size:5em;color:#30c0bb;}
+.big-blue h4{font-size:1.4em;text-transform: none;font-family:BrandonReg;}
+
+ul,li{padding:0;}
+
 @media (max-width: 767px) {
  #phone-pic{width:14em;margin-left:;}   
+ input{width:100%;}
+ form{width:100%;}
+ #sign_up_form{display:none}
+ #signup{display:none;}
+
+ #sign_up_form2{display:inline-block}
+ #signup2{display:inline-block}
+ 
+ h2{font-size:2em;}
+ .item h3{font-size:2em;}
+ .pad-it-1{padding:0;}
+ .full-large{padding:6em 0 10em;}
 }

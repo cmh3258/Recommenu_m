@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>My first bootstrap project</title>
+        
+        <link rel ="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" title="style1">
+        <link rel ="stylesheet" type="text/css" href="bootstrap/css/mystyle.css" title="style1">
+        <link rel ="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.css" title="style1">
+        
+        <link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+        
+        <!-- Load jQuery -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <!--<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>    -->
+        
+        <!-- Load ScrollTo -->
+        <script type="text/javascript" src="http://flesler-plugins.googlecode.com/files/jquery.scrollTo-1.4.2-min.js"></script>
+ 
+        <!-- Load LocalScroll -->
+        <script type="text/javascript" src="http://flesler-plugins.googlecode.com/files/jquery.localscroll-1.2.7-min.js"></script>
+        
+        
+        <!--
+        
+         <script>
+    // When the document is loaded...
+    $(document).ready(function()
+    {
+        // Scroll the whole document
+        $('#nav_wrap').localScroll({
+           target:'body'
+        });
+        $('#nav').localScroll({
+           target:'body'
+        });
+        
+    });
+    </script> 
+        -->
+    </head>
+    <body>
+        <script src="bootstrap/js/bootstrap.js"></script>
+        <script type="text/javascript">
+            
+        </script>
+         
+        <script>
+            $(document).ready(function() {
+                //alert("hibe");
+               if($(window).width() < 700)
+                    $('.navbar').addClass('upfront');
+                if($(window).width() < 400){
+                    $('.nav').addClass('helpme');
+                    $('#nav-logo').addClass('hidden');
+                }
+                winWidth = $(window).width();
+                if(winWidth > 0)
+                    $('.navbar').addClass('nav-color zfront nav-height');
+            
+  //change the integers below to match the height of your upper dive, which I called
+  //banner.  Just add a 1 to the last number.  console.log($(window).scrollTop())
+  //to figure out what the scroll position is when exactly you want to fix the nav
+  //bar or div or whatever.  I stuck in the console.log for you.  Just remove when
+  //you know the position.
+            $(window).scroll(function () {   
+                //alert("hi");
+                console.log($(window).scrollTop());
+                    
+                if ($(window).scrollTop() > 200) {
+                    $('.navbar-fixed-top').addClass('nav-color');
+                }   
+
+                if ($(window).scrollTop() < 201) {
+                    $('.navbar-fixed-top').removeClass('nav-color');
+                }
+                
+                });
+                
+            });
+            
+            $(window).resize(function() {
+                winWidth = $(window).width();
+                if(winWidth < 700)
+                    $('.navbar').addClass('upfront');
+                else
+                    $('.navbar').removeClass('upfront');
+            });
+            $(window).resize(function() {
+                winWidth = $(window).width();
+                if(winWidth < 900)
+                    $('.navbar').addClass('nav-color zfront');
+                else
+                    $('.navbar').removeClass('nav-color zfront');
+            });
+            $(window).resize(function() {
+                winWidth = $(window).width();
+                if(winWidth < 400){
+                    $('.nav').addClass('helpme navbar-fixed-top');
+                    $('#nav-logo').addClass('hidden');
+                }
+                else{
+                    $('#nav-logo').removeClass('hidden');
+                    $('.nav').removeClass('helpme')
+                }
+                
+            });
+            
+        </script>
+        
+       
+        <div id="home"></div>
+        <div class="navbar" role="navigation">
+              <div class="na navbar-fixed-top">
+                <div class="container" id="nav">
+                    <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+                                        <span class = "icon-bar"></span>
+                                        <span class = "icon-bar"></span>
+                                        <span class = "icon-bar"></span>
+                    </button>
+        
+                    <a href="#home" class="brand"><img src="images/wordmark_white.png" alt="logo" id="nav-logo"/> </a>
+                    <div class="collapse navbar-collapse navHeaderCollapse">
+                        <div id="nav_wrap" class="">   
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="https://itunes.apple.com/us/app/recommenu/id829299696?mt=8" class=""><img src="images/apple-badge.png" alt="logo" id="app-store-icon"/></a></li>
+                            <li class="active li-pad"><a class="a-pad" href="index.html">About the App</a></li>
+                            <li class="li-pad"><a href="#contact">Contact Us</a></li>
+                            <li class="li-pad"><a href="http://localhost/GitHub/Recommenu_m/website_v2/blog/">Blog</a></li>
+                        </ul>
+                            </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+
+        <!--
+            <div id="testing" class="full-large">
+                <div class="container">
+                    <div class="text-center">
+                    <img src="images/monogram_blue_drop shadow.png" id="icon-header" />    
+                    <h2>Helping you choose</h2>
+                    <h1>a <span class="cursive">great meal</span>, every time</h1>
+                    </div>
+                </div>
+            </div>
+        -->
+        <section class="big-blue">
+            <div class="container">
+                <div class="text-center">
+                    
+                    <h2>Are you a TasteMaker?</h2>
+                    <div class="text-left subhead">
+                       <h4>What is a Recommenu TasteMaker?</h4> 
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </body>
+</html>

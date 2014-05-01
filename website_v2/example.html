@@ -13,20 +13,40 @@
         <link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
         
         <!-- Load jQuery -->
-        <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>-->
- 
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <!--<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>    -->
+        
         <!-- Load ScrollTo -->
         <script type="text/javascript" src="http://flesler-plugins.googlecode.com/files/jquery.scrollTo-1.4.2-min.js"></script>
  
         <!-- Load LocalScroll -->
         <script type="text/javascript" src="http://flesler-plugins.googlecode.com/files/jquery.localscroll-1.2.7-min.js"></script>
+        
+        
+        <!--
+        
+         <script>
+    // When the document is loaded...
+    $(document).ready(function()
+    {
+        // Scroll the whole document
+        $('#nav_wrap').localScroll({
+           target:'body'
+        });
+        $('#nav').localScroll({
+           target:'body'
+        });
+        
+    });
+    </script> 
+        -->
     </head>
     <body>
-        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>    
         <script src="bootstrap/js/bootstrap.js"></script>
         <script type="text/javascript">
             
         </script>
+         
         <script>
             $(document).ready(function() {
                 //alert("hibe");
@@ -87,25 +107,29 @@
             
         </script>
         
+       
+        <div id="home"></div>
         <div class="navbar" role="navigation">
               <div class="na navbar-fixed-top">
-                <div class="container">
+                <div class="container" id="nav">
                     <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
                                         <span class = "icon-bar"></span>
                                         <span class = "icon-bar"></span>
                                         <span class = "icon-bar"></span>
                     </button>
         
-                    <a href="http://localhost/GitHub/Recommenu_m/website_v2/example.html" class="brand"><img src="images/wordmark_white.png" alt="logo" id="nav-logo"/> </a>
+                    <a href="#home" class="brand"><img src="images/wordmark_white.png" alt="logo" id="nav-logo"/> </a>
                     <div class="collapse navbar-collapse navHeaderCollapse">
+                        <div id="nav_wrap" class="">   
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#" class=""><img src="images/apple-badge.png" alt="logo" id="app-store-icon"/></a></li>
-                            <li class="active li-pad"><a class="a-pad" href="#">About the App</a></li>
-                            <li class="li-pad"><a href="#">Learn More</a></li>
-                            <li class="li-pad"><a href="#">Meet the Team</a></li>
-                            <li class="li-pad"><a href="#">Contact Us</a></li>
+                            <li><a href="https://itunes.apple.com/us/app/recommenu/id829299696?mt=8" class=""><img src="images/apple-badge.png" alt="logo" id="app-store-icon"/></a></li>
+                            <li class="active li-pad"><a class="a-pad" href="#about">About the App</a></li>
+                            <li class="li-pad"><a href="#more">Learn More</a></li>
+                            <li class="li-pad"><a href="#team">Meet the Team</a></li>
+                            <li class="li-pad"><a href="#contact">Contact Us</a></li>
                             <li class="li-pad"><a href="http://localhost/GitHub/Recommenu_m/website_v2/blog/">Blog</a></li>
                         </ul>
+                            </div>
                     </div>
                 </div>
               </div>
@@ -164,14 +188,18 @@
        <section class="sectional"> 
         <div class="container">
             
-            <div id="testg" class="hero-unit">
-                <div class="text-center subhead">
+                <div class="text-center subhead col-md-6">
                     <img src="images/foodie-icon.png" id="foodie-icon">            
                     <h3>Are you a Foodie</h3>
-                    <p>Find out what it means to join onto the recommenu team as a tastemaker</p>
+                    <p>Find out what it means to join onto the Recommenu team as a Tastemaker</p>
+                    <a href="foodies.html" class="btn btn-large btn-success">Get Started</a>
+                </div>
+                <div class="text-center subhead col-md-6">
+                    <img src="images/apple_icon.png" id="foodie-icon">            
+                    <h3>Recommenu on the App Store!</h3>
+                    <p>Let us know what you think about it.</p>
                     <a href="#" class="btn btn-large btn-success">Get Started</a>
                 </div>
-                
                 <!--
                 <div class="col-md-6 subhead">
                     <div class="pad-it-1">
@@ -188,7 +216,7 @@
                     </div>
                 </div>
                 -->
-            </div>
+            
             </div>
            </section>
         
@@ -220,6 +248,8 @@
            --> 
         <!--  Carousel - consult the Twitter Bootstrap docs at 
       http://twitter.github.com/bootstrap/javascript.html#carousel -->
+        <div id="about"></div>
+        
         <section class="sketch-back">
         <div id="this-carousel-id" class="carousel slide"><!-- class of slide for animation -->
             <div class="carousel-inner container">
@@ -231,8 +261,9 @@
                     <div class="col-md-6 pad-it-1">
                         <h3>Find the closest Restaurant</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a metus arcu. Mauris tempus lorem eget purus nec, mattis dictum leo. Aenean at ante fringilla, dictum dolor nec, laoreet diam. In consectetur molestie erat et dictum. Nulla id elit non quam tristique sodales. Aliquam gravida neque egestas vestibulum rhoncus. Aliquam consectetur dignissim mollis. Nunc adipiscing et felis vel mo
-                            Suspendisse vitae neque tincidunt, bibendum quam sit amet
+                            Recommenu uses your current location to find the restaurant you are at, or 
+                            close by. This will allow you to pull up the restaurants menu instantly or 
+                            view it when you are in line or even before you get there. 
                         </p>
                     </div>
                     <!--
@@ -248,8 +279,10 @@
                     <div class="col-md-6 pad-it-1">
                         <h3>Individual Item Ratings</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a metus arcu. Mauris tempus lorem eget purus nec, mattis dictum leo. Aenean at ante fringilla, dictum dolor nec, laoreet diam. In consectetur molestie erat et dictum. Nulla id elit non quam tristique sodales. Aliquam gravida neque egestas vestibulum rhoncus. Aliquam consectetur dignissim mollis. Nunc adipiscing et felis vel mo
-                            Suspendisse vitae neque tincidunt, bibendum quam sit amet
+                            As food lovers, we want everyone to be able to get good food every time they
+                            eat at a restaurant. With individual item ratings you can now see how each
+                            item rates according to the community around you, helping you make a more 
+                            informed decision and spend your money wisely.
                         </p>
                     </div>
                 </div>
@@ -260,8 +293,13 @@
                     <div class="col-md-6 pad-it-1">
                         <h3>Social Media</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a metus arcu. Mauris tempus lorem eget purus nec, mattis dictum leo. Aenean at ante fringilla, dictum dolor nec, laoreet diam. In consectetur molestie erat et dictum. Nulla id elit non quam tristique sodales. Aliquam gravida neque egestas vestibulum rhoncus. Aliquam consectetur dignissim mollis. Nunc adipiscing et felis vel mo
-                            Suspendisse vitae neque tincidunt, bibendum quam sit amet
+                            In a normal restaurant experience, you either ask your friends you are with
+                            how the food is or ask the waiter what their favorite dish is. Their isn't much 
+                            help on choosing something great and worth your money. Recommenu bridges this
+                            gap. Connecting with your friends and family is one of the highest priorities
+                            in today's society. Through Recommenu you can see what your friends, family, 
+                            foodies and everyone else have rated. Connect through Facebook and start 
+                            exploring.
                         </p>
                     </div>
                 </div>
@@ -272,8 +310,11 @@
                     <div class="col-md-6 pad-it-1">
                         <h3>Help your friends</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a metus arcu. Mauris tempus lorem eget purus nec, mattis dictum leo. Aenean at ante fringilla, dictum dolor nec, laoreet diam. In consectetur molestie erat et dictum. Nulla id elit non quam tristique sodales. Aliquam gravida neque egestas vestibulum rhoncus. Aliquam consectetur dignissim mollis. Nunc adipiscing et felis vel mo
-                            Suspendisse vitae neque tincidunt, bibendum quam sit amet
+                            We all love to help people. We love to help others make the most informed decisions.
+                            With Recommenu you can now help your friends and your community answer one of the most
+                            important questions, "What should I eat? What is good here?". Everyone will be able to 
+                            see your ratings and if you are connected with Facebook, you will be able to see what 
+                            your friends have liked.
                         </p>
                     </div>
                 </div>
@@ -285,38 +326,38 @@
         </div><!-- /.carousel -->
         </section>
         
+        <div id="team"></div>
         <section class="gray-sketch-back subhead">
             <div class="container">
                 <h2 class="text-center pad-bottom">Meet the Team</h2>
                <div class="centered-one"> 
-                <div class="col-md-4 text-center">
+                <div class="col-md-4 text-center pad-it-1">
                     <img src="images/img_jake.png" class="prof-pic">
                     <h5>Jake Bailey</h5>
                     <h6>CEO</h6>
                 </div>
-                <div class="col-md-4 text-center">
+                <div class="col-md-4 text-center pad-it-1">
                     <img src="images/img_blake.png" class="prof-pic">
                     <h5>Blake Ellingham</h5>
                     <h6>CTO, Frontend Developer</h6>
                 </div>
-                <div class="col-md-4 text-center">
+                <div class="col-md-4 text-center pad-it-1">
                     <img src="images/img_carlos.png" class="prof-pic">
                     <h5>Carlos Balderas</h5>
                     <h6>Developer</h6>
                 </div>
-               </div>
-                <div class="centered-one pad-top"> 
-                <div class="col-md-4 text-center">
+               
+                <div class="col-md-4 text-center pad-it-1">
                     <img src="images/img_katie.png" class="prof-pic">
                     <h5>Katie Eldredge</h5>
                     <h6>Designer</h6>
                 </div>
-                <div class="col-md-4 text-center">
+                <div class="col-md-4 text-center pad-it-1">
                     <img src="images/img_chris.png" class="prof-pic">
                     <h5>Chris Hume</h5>
                     <h6>Developer</h6>
                 </div>
-                <div class="col-md-4 text-center">
+                <div class="col-md-4 text-center pad-it-1">
                     <img src="images/img_claire.png" class="prof-pic">
                     <h5>Claire Zimowski</h5>
                     <h6>Designer</h6>
@@ -325,46 +366,45 @@
             </div>
         </section>
         
+        <div id="more"></div>
         <section class="sectional straight-white">
-            <div class="container">
+            <div class="container subhead text-center">
                 <div id="mailing_list_content" class="">   
-                     <h3>Interested in Recommenu?</h3>
-                     <p id="desc_title2">Sign up for updates, special invites and early access.</p>
-                
-  
-    <form id="signup" action="cover_page.php" method="get">
-        <input type="hidden" name="ajax" value="true" />
-        <table id="sign_up_form">
-            <tr>
-                <td>
-                    <input type="text" name="fname" placeholder="First Name" id="fname" class="textinput" value="" />
-                </td>
-                <td>
-                    <input type="text" name="lname" placeholder="Last Name" id="lname" class="textinput" value="" />
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="email" name="email" placeholder="Email" id="email" class="textinput" value="" />
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="text" name="cname" id="cname" placeholder="City" class="textinput" value="" />
-                </td>
-            </tr>
-            <!--
-            HTML: <input type="radio" name="emailtype" value="html" checked="checked">
-            Text: <input type="radio" name="emailtype" value="text">
-            -->
-            <tr>
-                <td colspan="2">
-                    <input type="submit" id="SendButton" name="submit" class="textinput" value="Submit" />
-                </td>
-            </tr>
-        </table>
-    </form>
-    <div id="message"></div>
+                     <h2>Interested in Recommenu?</h2>
+                     <p id="desc_title2">Sign up for updates, special invites and future plans.</p>
+                     <form id="signup" action="cover_page.php" method="get">
+                         <input type="hidden" name="ajax" value="true" />
+                         <table id="sign_up_form">
+                             <tr>
+                                 <td>
+                                     <input type="text" name="fname" placeholder="First Name" id="fname" class="textinput" value="" />
+                                 </td>
+                                 <td>
+                                     <input type="text" name="lname" placeholder="Last Name" id="lname" class="textinput" value="" />
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td colspan="2">
+                                     <input type="email" name="email" placeholder="Email" id="email" class="textinput" value="" />
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td colspan="2">
+                                     <input type="text" name="cname" id="cname" placeholder="City" class="textinput" value="" />
+                                 </td>
+                             </tr>
+                             <!--
+                             HTML: <input type="radio" name="emailtype" value="html" checked="checked">
+                             Text: <input type="radio" name="emailtype" value="text">
+                             -->
+                             <tr>
+                                 <td colspan="2">
+                                     <input type="submit" id="SendButton" name="submit" class="textinput" value="Submit" />
+                                 </td>
+                             </tr>
+                         </table>
+                     </form>    
+                     <div id="message"></div>
 
 
     <script type="text/javascript">
@@ -386,10 +426,23 @@
             </div>
         </section>
         
-        
+        <div id="contact"></div>
         <section class="dark-back subhead">
             <footer>
-                contact info
+                <div id="icon_navigation" class="container_small">
+                   <ul>
+                       <!-- <li><a href=""><img src="" alt="blog"/></a></li> -->
+                       <div class="col-md-4 text-center">
+                           <li><a href="https://twitter.com/RecommenuApp/"><img src="images/twiiter_icon.png"></a></li>
+                        </div>
+                         <div class="col-md-4 text-center">
+                        <li><a href="https://www.facebook.com/recommenuapp"><img src="images/facebook_icon.png"></a></li>
+                        </div>
+                         <div class="col-md-4 text-center">
+                        <li><a href="mailto:mail.recommenu@gmail.com?Subject=Recommenu%20Notification"><img src="images/mail_icon.png"></a></li>
+                        </div>
+                   </ul>
+               </div>
             </footer>
         </section>
         <!--
@@ -483,6 +536,7 @@ Ut cursus ligula eu augue ultrices vehicula. Nam posuere in elit vel mattis. Cra
         
         
         
+
         
     </body>
     

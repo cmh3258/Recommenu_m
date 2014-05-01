@@ -14,8 +14,8 @@ $menu_final = $_SESSION['new_menu'];
 
 //main ingredients for success
 $sections_main = $_SESSION['sections_main'];
-$restaurant_name = $_SESSION['restaurant_fsid'];
-$restaurant_fsid = $_SESSION['restaurant_name'];
+$restaurant_fsid = $_SESSION['restaurant_fsid'];
+$restaurant_name = $_SESSION['restaurant_name'];
 
 $news = array(
     "name" => $restaurant_name,

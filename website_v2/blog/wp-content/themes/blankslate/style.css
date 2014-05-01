@@ -93,7 +93,7 @@ body{background-image:url('images/pattern_fullscreen2.png');}
 	background-position: 0em 0em;
 	color:#fff;
    width:100%;
-   padding:10em 0 17em;
+   padding:12em 0 17em;
    margin-top:-4em;
    padding-left:0;
 }
@@ -177,3 +177,10 @@ body{background-image:url('images/pattern_fullscreen2.png');}
 .entry-meta{color:#ccc;}
 
 .helper ul{margin:0;padding:0;;}
+
+@media (max-width: 767px) {
+    header{width:90%;}
+    #web h2{color:;font-family:BrandonBold;font-size:3em;color:white;padding:;margin:0 auto;margin-bottom:1em;text-align:left;margin-left:-2em;}
+    .container{width:100%;}
+    .header-title{text-align:left;}
+}
